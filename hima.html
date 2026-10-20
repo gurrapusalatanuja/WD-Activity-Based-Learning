@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutristion</title>
+</head>
+<link rel="stylesheet"  href="himaja.css">
+<body>
+ <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">🥗 NutriFresh</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#mealplan">Meal Plans</a></li>
+                <li><a href="#tips">Healthy Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">EAT WELL • LIVE WELL</p>
+            <h1>Healthy Food for a <span>Healthy Life</span></h1>
+            <p>
+                Discover nutritious recipes, balanced meals,
+                and simple ways to improve your daily diet.
+            </p>
+            <a href="#recipes" class="btn">Explore Recipes</a>
+        </div>
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"
+                alt="Fresh healthy salad">
+        </div>
+    </section>
+
+    <!-- Food Categories -->
+    <section class="section" id="categories">
+        <h2>Explore Food Categories</h2>
+        <p class="subtitle">Choose nutritious food for every day</p>
+
+        <div class="category-grid">
+            <div class="category-card">🥗<h3>Salads</h3></div>
+            <div class="category-card">🍓<h3>Fruits</h3></div>
+            <div class="category-card">🥣<h3>Breakfast</h3></div>
+            <div class="category-card">🍲<h3>Lunch</h3></div>
+            <div class="category-card">🥛<h3>Healthy Drinks</h3></div>
+        </div>
+    </section>
+
+    <!-- Recipes -->
+    <section class="section recipes" id="recipes">
+        <h2>Popular Healthy Recipes</h2>
+        <p class="subtitle">Simple meals with nutritious ingredients</p>
+
+        <div class="recipe-grid">
+
+            <article class="recipe-card">
+                <img
+                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80"
+                    alt="Vegetable salad">
+                <div class="recipe-content">
+                    <span class="badge">Vegetarian</span>
+                    <h3>Fresh Vegetable Salad</h3>
+                    <p>Ingredients: Cucumber, tomato, carrot, lettuce and lemon.</p>
+                    <div class="recipe-info">
+                        <span>⏱ 10 min</span>
+                        <span>🔥 Approx. 180 kcal</span>
+                    </div>
+                    <button onclick="showRecipe('Fresh Vegetable Salad',
+                    'Mix cucumber, tomato, carrot and lettuce. Add lemon juice and serve fresh.')">
+                    View Recipe
+                    </button>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <img
+                    src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=700&q=80"
+                    alt="Healthy breakfast bowl">
+                <div class="recipe-content">
+                    <span class="badge">Breakfast</span>
+                    <h3>Fruit Oatmeal Bowl</h3>
+                    <p>Ingredients: Oats, milk, banana, apple and nuts.</p>
+                    <div class="recipe-info">
+                        <span>⏱ 15 min</span>
+                        <span>🔥 Approx. 320 kcal</span>
+                    </div>
+                    <button onclick="showRecipe('Fruit Oatmeal Bowl',
+                    'Cook oats with milk. Add sliced banana, apple and a few nuts.')">
+                    View Recipe
+                    </button>
+                </div>
+            </article>
+
+            <article class="recipe-card">
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                    alt="Healthy lentil soup">
+                <div class="recipe-content">
+                    <span class="badge">High Fibre</span>
+                    <h3>Vegetable Lentil Soup</h3>
+                    <p>Ingredients: Lentils, carrot, tomato, spinach and spices.</p>
+                    <div class="recipe-info">
+                        <span>⏱ 30 min</span>
+                        <span>🔥 Approx. 250 kcal</span>
+                    </div>
+                    <button onclick="showRecipe('Vegetable Lentil Soup',
+                    'Cook lentils with chopped vegetables, water and mild spices until soft.')">
+                    View Recipe
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Meal Plan -->
+    <section class="section meal-plan" id="mealplan">
+        <h2>Daily Meal Plan</h2>
+        <p class="subtitle">An example of a balanced day of eating</p>
+
+        <div class="meal-grid">
+            <div class="meal-card">
+                <span>🌅</span>
+                <h3>Breakfast</h3>
+                <p>Oatmeal, fruit and milk</p>
+            </div>
+            <div class="meal-card">
+                <span>☀️</span>
+                <h3>Lunch</h3>
+                <p>Rice or roti, dal and vegetables</p>
+            </div>
+            <div class="meal-card">
+                <span>🍎</span>
+                <h3>Snack</h3>
+                <p>Seasonal fruit and nuts</p>
+            </div>
+            <div class="meal-card">
+                <span>🌙</span>
+                <h3>Dinner</h3>
+                <p>Roti, vegetables and protein-rich food</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healthy Tips -->
+    <section class="section tips" id="tips">
+        <h2>Healthy Eating Tips</h2>
+
+        <div class="tips-grid">
+            <div class="tip">
+                <span>💧</span>
+                <h3>Stay Hydrated</h3>
+                <p>Drink water regularly throughout the day.</p>
+            </div>
+            <div class="tip">
+                <span>🥦</span>
+                <h3>Eat Variety</h3>
+                <p>Include different vegetables, fruits and whole grains.</p>
+            </div>
+            <div class="tip">
+                <span>🍽️</span>
+                <h3>Balanced Meals</h3>
+                <p>Include carbohydrates, protein, healthy fats and fibre.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>🥗 NutriFresh</h2>
+        <p>Eat Healthy. Feel Better. Live Happier.</p>
+        <p class="copyright">© 2026 NutriFresh | Healthy Food & Nutrition</p>
+    </footer>
+
+    <!-- Recipe Popup -->
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeRecipe()">✕</button>
+            <h2 id="recipeTitle"></h2>
+            <p id="recipeInstructions"></p>
+        </div>
+    </div>
+
+    <script>
+        function showRecipe(title, instructions) {
+            document.getElementById("recipeTitle").textContent = title;
+            document.getElementById("recipeInstructions").textContent = instructions;
+            document.getElementById("recipeModal").style.display = "flex";
+        }
+
+        function closeRecipe() {
+            document.getElementById("recipeModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
+
