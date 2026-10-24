@@ -1,0 +1,330 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fc;
+  color: #26334d;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 230px;
+  background: #172554;
+  color: white;
+  padding: 25px 16px;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 13px 12px;
+  margin: 8px 0;
+  color: #dbeafe;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Main area */
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 28px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  font-size: 27px;
+  margin-bottom: 7px;
+}
+
+.header p {
+  color: #718096;
+}
+
+.profile {
+  background: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #1725540d;
+}
+
+/* Student details */
+.student {
+  background: linear-gradient(120deg, #2563eb, #6366f1);
+  color: white;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
+
+.student h2 {
+  margin-bottom: 14px;
+}
+
+.student-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.student-info p {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: white;
+  padding: 21px;
+  border-radius: 13px;
+  box-shadow: 0 3px 12px #1725540d;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card .label {
+  color: #718096;
+  font-size: 14px;
+}
+
+.card h2 {
+  margin: 13px 0 7px;
+  font-size: 27px;
+  color: #1d4ed8;
+}
+
+.card small {
+  color: #64748b;
+}
+
+/* Content sections */
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 22px;
+  margin-bottom: 25px;
+}
+
+.panel {
+  background: white;
+  padding: 23px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px #1725540d;
+  min-width: 0;
+}
+
+.panel h2 {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+.subject {
+  margin-bottom: 19px;
+}
+
+.subject-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+  margin-bottom: 9px;
+}
+
+.progress {
+  background: #e5e7eb;
+  height: 9px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.blue { background: #3b82f6; }
+.green { background: #10b981; }
+.orange { background: #f59e0b; }
+.purple { background: #8b5cf6; }
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 380px;
+}
+
+th, td {
+  padding: 14px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+.result {
+  color: #059669;
+  font-weight: bold;
+}
+
+/* Exam schedule */
+.exam {
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.exam:last-child {
+  border-bottom: none;
+}
+
+.exam strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.exam p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Announcements */
+.notice {
+  padding: 14px;
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  border-radius: 7px;
+  margin-bottom: 13px;
+}
+
+.notice strong {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.notice p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+footer {
+  text-align: center;
+  color: #718096;
+  padding: 20px 0 5px;
+  font-size: 13px;
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .logo {
+    margin-bottom: 12px;
+  }
+
+  .sidebar nav {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+  }
+
+  .sidebar a {
+    white-space: nowrap;
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .main {
+    padding: 16px;
+  }
+
+  .header h1 {
+    font-size: 23px;
+  }
+
+  .student-info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cards {
+    gap: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 23px;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+}
